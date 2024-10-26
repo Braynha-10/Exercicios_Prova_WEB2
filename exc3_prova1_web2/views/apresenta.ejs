@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Apresenta lista</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+
+    <% if (individuo == "clientes") { %>
+        <% clientes.forEach(cliente => { %>
+            <ul>
+                <li>
+                    CPF: <%= cliente.cpf %><br>
+                    Nome: <%= cliente.nome %><br>
+                    Idade: <%= cliente.idade %><br>
+                    Endereço: <%= cliente.endereco %><br>
+                </li>  
+            </ul>
+        <% }) %>
+    <% } else if (individuo == "funcionarios") { %>
+        <% funcionarios.forEach(funcionario => { %>
+            <ul>
+                <li>
+                    CPF: <%= funcionario.cpf %><br>
+                    Nome: <%= funcionario.nome %><br>
+                    Telefone: <%= funcionario.telefone %><br>
+                    Cargo: <%= funcionario.cargo %><br>
+                </li>  
+            </ul>
+        <% }) %>
+    <% } %>
+
+</body>
+</html>
